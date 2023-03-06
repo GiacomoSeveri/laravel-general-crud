@@ -12,7 +12,8 @@ class CardController extends Controller
      */
     public function index()
     {
-        //
+        $cards = Card::all();
+        return view('index', compact('cards'));
     }
 
     /**
@@ -44,7 +45,8 @@ class CardController extends Controller
      */
     public function edit(Card $cards)
     {
-        //
+        //ciao ora vediamo se posso vedere cose
+        //secondo commento per proiva
     }
 
     /**
