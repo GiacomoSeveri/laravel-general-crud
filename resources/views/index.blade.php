@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <h1 class="text-center"> Carte collezionabili magic </h1>
+    <h1 class="text-center mt-5 mb-5"> Carte collezionabili magic </h1>
 
     <div class="d-flex flex-wrap card-container container">
         @foreach ($cards as $card)
