@@ -35,9 +35,10 @@ class CardController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Card $cards)
+    public function show(string $id)
     {
-        //
+        $card = Card::findOrFail($id);
+        return view('card.show', compact('card'));
     }
 
     /**
