@@ -44,12 +44,11 @@ class CardController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Card $cards)
+    public function edit(string $id)
     {
-        //ciao ora vediamo se posso vedere cose
-        //secondo commento per proiva
-        //prova prova prova
-        //serena
+        $cards = Card::findOrFail($id);
+        return view('cards.edit', compact('cards'));
+        // dd($comics);
     }
 
     /**
