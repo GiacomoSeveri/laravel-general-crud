@@ -58,8 +58,11 @@ class CardController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Card $cards)
+    public function destroy(String $id)
     {
-        //
+        $cards = Card::findOrFail($id)
+        $cards->delete();
+        
+        return to_route('index');
     }
 }
