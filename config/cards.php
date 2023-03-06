@@ -5,7 +5,7 @@ return
             "name_card" => "A Nord",
             "coast" => "1",
             "img" => "https://mtgdb.it/_dbimg/OG/111.jpg",
-            "type_card" => "	Stregoneria",
+            "type_card" => "Stregoneria",
             "ed" => "Ondata Glaciale",
             "effect" => "Search your library for a snow land card, put it onto the battlefield tapped, then shuffle.",
             "text" => "Le nostre terre di confine sono cadute sotto la morsa del secondo inverno di Heidar. Procedete e reclamatele in nome di Yavimaya.",
