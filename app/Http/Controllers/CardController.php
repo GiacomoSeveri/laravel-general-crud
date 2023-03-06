@@ -65,6 +65,7 @@ class CardController extends Controller
      */
     public function destroy(string $id)
     {
+<<<<<<< HEAD
         $cards = Card::findOnFail($id);
         $cards->delete();
 
@@ -72,5 +73,13 @@ class CardController extends Controller
             ->with('message', "'$cards->series' has been successfully removed")
             ->with('type', 'success')
             -with()
+=======
+        // $cards = Card::findOnFail($id)
+        // $cards->delete();
+
+        // return to_route('index')
+        //     ->with('message', "'$cards->series' has been successfully removed")
+        //     ->with('type', 'success');
+>>>>>>> edit-feature-second
     }
 }
