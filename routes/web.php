@@ -15,4 +15,7 @@ use App\Http\Controllers\CardController;
 */
 
 Route::get('/', [CardController::class, 'index'])->name('index');
-Route::get('/cards/{id}', [CardController::class, 'show'])->name('cards.show');
+//Get create
+Route::get('/cards/create', [CardController::class, 'create'])->name('cards.create');
+
+Route::get('/card/{id}', [CardController::class, 'show'])->name('card.show');
