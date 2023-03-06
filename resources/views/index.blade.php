@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-
+<!-- test -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +23,7 @@
             <div class="single-card">
                 
                 <img src="{{$card->img}}" alt="immagine">
+                <a href="{{}}">
 
             </div>
         @endforeach

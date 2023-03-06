@@ -45,7 +45,9 @@ class CardController extends Controller
      */
     public function edit(Card $cards)
     {
-        //
+        //ciao ora vediamo se posso vedere cose
+        //secondo commento per proiva
+        //prova prova prova
     }
 
     /**
@@ -59,11 +61,13 @@ class CardController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(String $id)
+    public function destroy(string $id)
     {
-        $cards = Card::findOrFail($id)
+        $cards = Card::findOnFail($id)
         $cards->delete();
         
-        return to_route('index');
+        return to_route('index')
+            ->with('message', "'$cards->series' has been successfully removed")
+            ->with('type', 'success');
     }
 }
