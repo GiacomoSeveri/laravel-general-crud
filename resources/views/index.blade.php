@@ -16,8 +16,17 @@
 </head>
 
 <body>
+    <h1 class="text-center"> Carte collezionabili magic </h1>
 
-    @dd($cards)
+    <div class="d-flex flex-wrap card-container container">
+        @foreach ($cards as $card)
+            <div class="single-card">
+                
+                <img src="{{$card->img}}" alt="immagine">
+
+            </div>
+        @endforeach
+    </div>
 
 </body>
 
