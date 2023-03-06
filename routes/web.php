@@ -18,4 +18,4 @@ Route::get('/', [CardController::class, 'index'])->name('index');
 //Get create
 Route::get('/cards/create', [CardController::class, 'create'])->name('cards.create');
 
-Route::get('/card/{id}', [CardController::class, 'show'])->name('card.show');
+Route::get('/cards/{id}', [CardController::class, 'show'])->name('cards.show');

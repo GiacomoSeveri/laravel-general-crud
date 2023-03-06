@@ -16,11 +16,12 @@
    
    </div>
 
-   <div class="mt-5">
-       <a href="edit" class="btn btn-success">modifica</a>
-       <a href="{{route('index')}}" class="btn btn-primary">indietro</a>
-       <a href="TODO" class="btn btn-danger">Elimina</a>
-   </div>
+   
+   
+</div>
 
-
+<div class="container mt-5">
+    <a href="edit" class="btn btn-success">modifica</a>
+    <a href="{{route('index')}}" class="btn btn-primary">indietro</a>
+    <a href="TODO" class="btn btn-danger">Elimina</a>
 </div>
