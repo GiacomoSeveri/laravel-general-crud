@@ -20,10 +20,10 @@
 
     <div class="d-flex flex-wrap card-container container">
         @foreach ($cards as $card)
-            <div class="single-card">
+            <div class="single-card d-flex flex-column align-items-center">
                 
                 <img src="{{$card->img}}" alt="immagine">
-                <a href="{{}}">
+                <a href="{{route('card.show', $card['id'])}}" class="btn-primary btn mt-3 mb-5">visualizza</a>
 
             </div>
         @endforeach
