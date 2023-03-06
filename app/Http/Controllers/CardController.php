@@ -48,15 +48,20 @@ class CardController extends Controller
     {
         $cards = Card::findOrFail($id);
         return view('cards.edit', compact('cards'));
-        // dd($comics);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Card $cards)
+    public function update(Request $request, string $id)
     {
-        //
+        $data = $request->all();
+
+        $cards = Card::findOrFail($id);
+        $cards->fill($data);
+        $cards->save();
+
+        return to_route('cards.show', $cards->id);
     }
 
     /**
