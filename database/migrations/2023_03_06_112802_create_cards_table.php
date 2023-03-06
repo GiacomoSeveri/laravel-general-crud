@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->id();
-            $table->string('name_card', 25);
+            $table->string('name_card', 255);
             $table->tinyInteger('coast');
             $table->string('img', 255);
-            $table->string('type_card', 25);
+            $table->string('type_card', 255);
             $table->string('ed', 25);
             $table->string('effect', 255);
             $table->string('text', 255);
-            $table->tinyInteger('force');
-            $table->tinyInteger('costitution');
+            $table->string('force', 50);
+            $table->string('costitution', 50);
             $table->timestamps();
         });
     }
