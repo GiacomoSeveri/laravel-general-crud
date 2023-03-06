@@ -68,5 +68,6 @@ class CardController extends Controller
         return to_route('index')
             ->with('message', "'$cards->series' has been successfully removed")
             ->with('type', 'success');
+            ->with()
     }
 }
