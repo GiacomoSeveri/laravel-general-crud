@@ -15,3 +15,7 @@ use App\Http\Controllers\CardController;
 */
 
 Route::get('/', [CardController::class, 'index'])->name('index');
+//Get create
+Route::get('/cards/create', [ComicController::class, 'create'])->name('cards.create');
+
+Route::get('/card/{id}', [CardController::class, 'show'])->name('card.show');

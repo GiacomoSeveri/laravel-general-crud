@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-
+<!-- test -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,9 +20,10 @@
 
     <div class="d-flex flex-wrap card-container container">
         @foreach ($cards as $card)
-            <div class="single-card">
+            <div class="single-card d-flex flex-column align-items-center">
                 
                 <img src="{{$card->img}}" alt="immagine">
+                <a href="{{route('card.show', $card['id'])}}" class="btn-primary btn mt-3 mb-5">visualizza</a>
 
             </div>
         @endforeach
