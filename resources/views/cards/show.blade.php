@@ -5,24 +5,23 @@
    <img src="{{$card->img}}" class="me-5">
 
    <div class="descriptions">
-   <h3><span class="text">Nome: </span > {{$card->name_card}}</h3>
-   <h3><span class="text">Costo:</span > {{$card->coast}}</h3>
-   <h3><span class="text">Tipo:</span > {{$card->type_card}}</h3>
-   <h3><span class="text">Edizione:</span > {{$card->ed}}</h3>
-   <h3><span class="text">Effetto: </span >{{$card->effect}}</h3>
-   <h3><span class="text">Descrizione: </span >{{$card->text}}</h3>
-   <h3><span class="text">Forza:</span > {{$card->force}}</h3>
-   <h3><span class="text">Costituzione:</span > {{$card->force}}</h3>
+        <h3><span class="text-success">Nome: </span > {{$card->name_card}}</h3>
+        <h3><span class="text-success">Costo:</span > {{$card->coast}}</h3>
+        <h3><span class="text-success">Tipo:</span > {{$card->type_card}}</h3>
+        <h3><span class="text-success">Edizione:</span > {{$card->ed}}</h3>
+        <h3><span class="text-success">Effetto: </span >{{$card->effect}}</h3>
+        <h3><span class="text-success">Descrizione: </span >{{$card->text}}</h3>
+        <h3><span class="text-success">Forza:</span > {{$card->force}}</h3>
+        <h3><span class="text-success">Costituzione:</span > {{$card->costitution}}</h3>
    
    </div>
 
-
-
+   
+   
 </div>
 
 <div class="container mt-5">
-
-    <a href="edit" class="btn btn-success">modifica</a>
+    <a href="{{route('cards.edit', $card['id'])}}" class="btn btn-success">modifica</a>
     <a href="{{route('index')}}" class="btn btn-primary">indietro</a>
     <a href="TODO" class="btn btn-danger">Elimina</a>
 </div>

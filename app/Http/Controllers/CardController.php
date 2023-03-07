@@ -44,20 +44,24 @@ class CardController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Card $cards)
+    public function edit(string $id)
     {
-        //ciao ora vediamo se posso vedere cose
-        //secondo commento per proiva
-        //prova prova prova
-        //serena
+        $cards = Card::findOrFail($id);
+        return view('cards.edit', compact('cards'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Card $cards)
+    public function update(Request $request, string $id)
     {
-        //
+        $data = $request->all();
+
+        $cards = Card::findOrFail($id);
+        $cards->fill($data);
+        $cards->save();
+
+        return to_route('cards.show', $cards->id);
     }
 
     /**
@@ -65,12 +69,12 @@ class CardController extends Controller
      */
     public function destroy(string $id)
     {
-        $cards = Card::findOnFail($id);
-        $cards->delete();
+        // $cards = Card::findOnFail($id);
+        // $cards->delete();
 
-        return to_route('index')
-            ->with('message', "'$cards->series' has been successfully removed")
-            ->with('type', 'success')
-            -with()
+        // return to_route('index')
+        //     ->with('message', "'$cards->series' has been successfully removed")
+        //     ->with('type', 'success')
+        //     -with()
     }
 }
