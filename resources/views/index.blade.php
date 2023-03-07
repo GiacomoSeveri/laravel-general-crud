@@ -18,6 +18,10 @@
 <body>
     <h1 class="text-center mt-5 mb-5"> Carte collezionabili magic </h1>
 
+    <div class="container d-flex justify-content-center mb-3">
+        <a class="btn btn-success" href="{{route('cards.create')}}">Aggiungi una nuova carta</a>
+    </div>
+
     <div class="d-flex flex-wrap card-container container">
         @foreach ($cards as $card)
             <div class="single-card d-flex flex-column align-items-center">
