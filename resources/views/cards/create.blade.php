@@ -1,7 +1,8 @@
 @vite('resources/js/app.js')
 
 <section class="add-form py-5 text-center">
-    <h2 class="mb-4">AGGIUNGI CARTA</h2>
+    <a class='btn btn-primary mb-3' href="{{route('index')}}">Torna Indietro</a>
+    <h2 class="mb-4">AGGIUNGI UNA NUOVA CARTA</h2>
     @if ($errors->any())
         <div class="col-12 alert mb-3 container p-3">
             <ul>
@@ -51,7 +52,7 @@
         </div>
 
         <div class="col-12 d-flex justify-content-center mt-3">
-            <button class="success" type="submit">Aggiungi</button>
+            <button class="btn btn-success" type="submit">Aggiungi</button>
         </div>
     </form>
 </section>
